@@ -11,9 +11,8 @@ import javax.servlet.ServletContext;
 
 public class UserAction extends ActionSupport implements ModelDriven<User> {
     User user = new User();
-    public String execute() throws Exception {
-
-        System.err.println("运行");
+    public String login() throws Exception {
+        System.out.println("Login 方法调用");
         UserService userService = new UserService();
         boolean success = userService.findUser(user);
         if(success)
@@ -26,6 +25,10 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
         }
     }
 
+    public String register() throws Exception {
+        System.out.println("register 方法调用");
+        return null;
+    }
     @Override
     public User getModel() {
         return user;

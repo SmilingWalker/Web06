@@ -5,10 +5,17 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-    <package name="MyPacage" namespace="/" extends="struts-default">
-        <action name="LoginAction" class="com.frank.web.UserAction" method="execute">
-            <result name="success">/index.html</result>
-            <result name="error">login.jsp</result>
+    <constant name="struts.devMode" value="true"></constant>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <package name="MyPackage" namespace="/" extends="struts-default">
+        <global-allowed-methods>register,login</global-allowed-methods>
+        <!--<action name="LoginAction" class="com.frank.web.UserAction" method="execute">-->
+            <!--<result name="success" type="redirect">/detail.html</result>-->
+            <!--<result name="error">/login.jsp</result>-->
+        <!--</action>-->
+        <action name="LoginAction_*" class="com.frank.web.UserAction" method="{1}">
+            <result name="success" type="redirect">/detail.html</result>
+            <result name="error">/login.jsp</result>
         </action>
     </package>
 </struts>

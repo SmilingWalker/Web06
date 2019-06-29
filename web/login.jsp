@@ -9,6 +9,10 @@
 <html>
 <head>
     <title>注册</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/head.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
 </head>
 <body>
 <div class="dvhead">
@@ -19,11 +23,11 @@
     </div>
 </div>
 <section  class="sec">
-    <form action="${pageContext.request.contextPath}/LoginAction" method="post">
+    <form action="${pageContext.request.contextPath}/LoginAction_login" method="post">
         <div class="register-box">
             <label for="username" class="username_label">
                 用 户 名
-                <input maxlength="20" name="userName" type="text"
+                <input maxlength="20" name="username" type="text"
                        placeholder="您的用户名和登录名" />
             </label>
             <div class="tips">
@@ -32,14 +36,13 @@
         <div class="register-box">
             <label for="username" class="other_label">
                 设 置 密 码
-                <input maxlength="20" type="password" name="pwd"
+                <input maxlength="20" type="password" name="password"
                        placeholder="建议至少使用两种字符组合" />
             </label>
             <div class="tips">
 
             </div>
         </div>
-
         <div class="arguement">
             <input type="checkbox" id="xieyi" /> 阅读并同意
             <a href="javascript:void(0)">《你问我答用户注册协议》</a>
@@ -55,7 +58,5 @@
     </form>
 </section>
 <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
-</body>
-
 </body>
 </html>
