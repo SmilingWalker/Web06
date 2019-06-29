@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Web06:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Web06_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Web06/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Web06" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Struts 2-2.5.14.1" />
+          <element id="library" level="application" name="mysql-connector-java-8.0.16" />
+          <element id="library" level="application" name="commons-dbcp2-2.6.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
